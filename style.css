@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #444444;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.faq-item {
+  background-color: #272727;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.faq-item:hover {
+  background-color: #3a3a3a;
+}
+
+.faq-question {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.toggle {
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.faq-item.active .toggle {
+  transform: rotate(90deg);
+}
+
+.slider-container {
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.image-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-item {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.image-item img {
+  width: auto;
+  height: 200px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.image-item img:hover {
+  transform: scale(1.05);
+}
+
+.textodecodeleto {
+  text-decoration: none;
+  color: white;
+}
+
+.benben {
+  width: 250px;
+  height: auto;
+}
+
+.rainbow-heading {
+  font-size: 10rem;
+  font-weight: bold;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-size: 200% 100%;
+  background-position: 0 0;
+  background-clip: text;
+  color: transparent;
+  animation: rainbowMove 5s linear infinite;
+  z-index: -1;
+  white-space: nowrap;
+}
+
+@keyframes rainbowMove {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
